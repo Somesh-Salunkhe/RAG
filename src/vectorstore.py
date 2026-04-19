@@ -53,6 +53,7 @@ class FaissVectorStore:
     def load(self):
         faiss_path = os.path.join(self.persist_dir, "faiss.index")
         meta_path = os.path.join(self.persist_dir, "metadata.pkl")
+        self.index = faiss.read_index(faiss_path)
         with open(meta_path, "rb") as f:
             self.metadata = pickle.load(f)
         print(f"[INFO] Loaded Faiss index and metadata from {self.persist_dir}")

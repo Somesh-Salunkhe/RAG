@@ -11,6 +11,7 @@ queries with context-aware summarization.
 ---
 
 ## 🗂️ Project Structure
+```bash
 PDF_RAG/
 │
 ├── src/
